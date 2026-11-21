@@ -85,18 +85,18 @@ background-image: url(./images/kick.png);
 /* Tablet */
 @media (min-width: 601px) and (max-width: 1024px) {
     .set {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-        width: 85%;
-        margin: 35px auto;
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        padding-left: 13%;
+    }
+
+    .l{
+      grid-area: 3/2/4/3;
     }
 
     .drum {
-        width: 75px;
-        height: 75px;
-        margin: 0;
+        margin: 10px;
         font-size: 2.5rem;
     }
 }
@@ -104,19 +104,27 @@ background-image: url(./images/kick.png);
 /* Mobile */
 @media (max-width: 600px) {
     .set {
-        display: flex;
+
+      display: grid;
+      grid-template-columns:repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      padding-left: 13%;
+        /* display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
         width: 90%;
-        margin: 30px auto;
+        margin: 30px auto; */
+    }
+    h1{
+      font-size: 3rem;
     }
 
     .drum {
-        width: 65px;
-        height: 65px;
-        margin: 0;
-        font-size: 2rem;
-    }
+        /* width: 65px;
+        height: 65px; */
+        margin: 5px;
+        font-size: 2.5rem;
+    } 
 }
 
